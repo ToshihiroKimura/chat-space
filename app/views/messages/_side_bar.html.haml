@@ -2,9 +2,9 @@
   .user-name
     .top-items
       %h1
-        user_id_1
+        = current_user.name
       .top-items__icons
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "i")
         = link_to "#" do
           = icon('fas', 'edit', class: "i")
