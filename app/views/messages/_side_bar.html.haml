@@ -1,26 +1,23 @@
 .side-bar
-  .side-bar__user-name
-    .side-bar__user-name__top-items
-      .side-bar__user-name__top-items__name
-        %p
-          user-name
-      .side-bar__user-name__top-items__icons
+  .user-name
+    .top-items
+      %h1
+        user_id_1
+      .top-items__icons
         = link_to "#" do
           = icon('fas', 'cog', class: "i")
         = link_to "#" do
           = icon('fas', 'edit', class: "i")
 
-  .side-bar__group-list
-    .side-bar__group-list__group-name
+  .group-list
+    .my-group
+      %h2
+        group_id_1
       %p
-        group-name
-    .side-bar__group-list__recent-message
+        また連絡するよ。
+    .my-group
+      %h2
+        group_id_2
       %p
-        recent-message
-    .side-bar__group-list__group-name
-      %p
-        group-name
-    .side-bar__group-list__recent-message
-      %p
-        recent-message
+        まだメッセージはありません。
 

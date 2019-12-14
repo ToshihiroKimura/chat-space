@@ -1,49 +1,44 @@
 .main-chat
-  .main-chat__group-info
-    .main-chat__group-info__group-name
+  .header
+    %h3
+      group_id_1
+    .header__group-member
+      %h4
+        Member:
       %p
-        group-name
-    .main-chat__group-info__member-list
-      %p
-        member-list
-    .main-chat__group-info__edit-btn
-      %p
-        Edit
-  .main-chat__group-message-list
-    .main-chat__group-message-list__user-name
-      %p
+        user_id_1, user_id_2
+    .header__edit-btn
+      =link_to "Edit", "#" , class: 'edit-link'
+  
+  .body
+    .message
+      .message__user-name
         user_id_1
-    .main-chat__group-message-list__time
-      %p
+      .message__time
         2019-12-24-23:54:01
-    .main-chat__group-message-list__message
       %p
         今日はありがとう。楽しかったね。
-    .main-chat__group-message-list__user-name
-      %p
+    .message
+      .message__user-name
         user_id_2
-    .main-chat__group-message-list__time
-      %p
+      .message__time
         2019-12-24-23:54:55
-    .main-chat__group-message-list__message
       %p
         次はいつ会える？
-    .main-chat__group-message-list__user-name
-      %p
+    .message
+      .message__user-name
         user_id_1
-    .main-chat__group-message-list__time
-      %p
+      .message__time
         2019-12-25-18:06:32
-    .main-chat__group-message-list__message
       %p
         また連絡するよ。
-  .main-chat__group-message-form
-    .main-chat__group-message-form__type-space
-      %p
-        type a message
-      .main-chat__group-message-form__type-space__file
-        = link_to "#" do
-          = icon('far', 'image', class: "main-chat__group-message-form__type-space__file")
-    .main-chat__group-message-form__send-btn
-      %p
-        Send
+  
+  .footer
+    .form
+      %input(type="text" class= "text" placeholder= "type a message" style= "border: none")
+        %label{class: "file"}
+          = icon('far', 'image')
+          %input{type: "file", style: "display: none"}
+
+    .btn
+      =link_to "Send", "#", class: 'send-link'
