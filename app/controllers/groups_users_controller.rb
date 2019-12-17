@@ -10,7 +10,4 @@ class GroupsUsersController < ApplicationController
 
   def update
   end
-
-  def destroy
-  end
 end
