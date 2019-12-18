@@ -7,18 +7,26 @@ class GroupsController < ApplicationController
 
   def create
     Group.create(group_params)
+    @group.save
+    redirect_to root_path
   end
 
   def edit
   end
 
   def update
-    group.update(group_params)
+    Group.update(group_params)
+    redirect_to root_path
   end
 
   private
   def group_params
-    params.require(:group).permit(:name)
+    params
+      .require(:group)
+      .permit(
+        Group::name + 
+        Groups_user::user_id
+      )
   end
  
   def set_group
