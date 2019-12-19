@@ -22,11 +22,7 @@ class GroupsController < ApplicationController
   private
   def group_params
     params
-      .require(:group)
-      .permit(
-        Group::name + 
-        Groups_user::user_id
-      )
+      .require(:group).permit(Group::name + Groups_user::user)
   end
  
   def set_group
