@@ -60,3 +60,6 @@ gem 'font-awesome-sass'
 
 #devise導入
 gem 'devise'
+
+#binding.pry導入
+gem 'pry-rails'

@@ -1,0 +1,20 @@
+= form_for @group do |f|
+  =render 'error_messages', model: f.object
+  .chat-group-form__field
+    .chat-group-form__field--left
+      = f.label "グループ名", class:'chat-group-form__label'
+    .chat-group-form__field--right
+      = f.text_field :name, class: 'chat-group-form__input', placeholder:"グループ名を入力してください"
+  .chat-group-form__field
+    / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときに使用します
+  .chat-group-form__field
+    .chat-group-form__field--left
+      = f.label "チャットメンバー", class:'chat-group-form__label'
+    .chat-group-form__field--right
+      = f.collection_check_boxes :user_ids, User.all, :id, :name, include_hideen: false do |b|
+        = b.label{b.check_box + b.text}
+      / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときにも使用します
+  .chat-group-form__field
+    .chat-group-form__field--left
+    .chat-group-form__field--right
+      %input.chat-group-form__action-btn{type: "submit", value: "Save"}/

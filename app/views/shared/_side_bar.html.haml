@@ -10,14 +10,11 @@
           = icon('fas', 'edit', class: "i")
 
   .group-list
-    .my-group
-      %h2
-        group_id_1
-      %p
-        また連絡するよ。
-    .my-group
-      %h2
-        group_id_2
-      %p
-        まだメッセージはありません。
+    - @groups.each do |group|
+      .group
+        = link_to "#"do
+          %h2
+            = group.name
+          %p
+            また連絡するよ。
 
