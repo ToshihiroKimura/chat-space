@@ -1,0 +1,24 @@
+.main-chat
+  .header
+    %h3
+      = @group.name
+    .header__group-member
+      %h4
+        Member:
+      - @group.users.each do |user|
+        %p
+          = user.name
+    .header__edit-btn
+      =link_to "Edit", edit_group_path(@group) , class: 'edit-link'
+  
+  .messages
+    = render partial: 'message', collection: @messages
+  
+  = form_for [@group, @message] do |f|
+    .footer
+      .form
+        = f.text_field :text, class: 'text', placeholder: 'type a message', style: 'border: none'
+        = f.label :image, class: 'file' do
+          = icon('far', 'image')
+          = f.file_field :image, style: 'display: none'
+      = f.submit 'Send', class: 'btn'

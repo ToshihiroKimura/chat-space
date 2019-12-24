@@ -63,10 +63,10 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|image|string||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|string||
+|image|text||
+|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
 
 ### Association
 - belongs_to :user

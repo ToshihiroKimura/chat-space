@@ -109,9 +109,9 @@
     }
   }
 
-  .body {
+  .messages {
     background-color: #fafafa;
-    height: calc(100vh - 190px);
+    height: calc(100vh - 190px); overflow:auto;
     box-sizing: border-box;
     padding: 35px 40px;
 
@@ -130,10 +130,12 @@
         margin-bottom: 12px;
       }
   
-      p {
-        font-size: 14px;
-        color: #434a54;
-        margin-bottom: 46px;
+      &__content {
+        p {
+          font-size: 14px;
+          color: #434a54;
+          margin-bottom: 46px;
+        }
       }
     }
   }
@@ -174,11 +176,8 @@
       background-color: #0095d9;
       margin-left: 15px;
       padding: 0 32px;
-
-      .send-link {
-        color: white;
-        text-decoration: none;
-      }
+      color: white;
+      text-decoration: none;
     }
   }
 }

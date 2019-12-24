@@ -1,5 +1,5 @@
 = form_for @group do |f|
-  =render 'error_messages', model: f.object
+  = render 'error_messages', model: f.object
   .chat-group-form__field
     .chat-group-form__field--left
       = f.label "グループ名", class:'chat-group-form__label'
@@ -17,4 +17,4 @@
   .chat-group-form__field
     .chat-group-form__field--left
     .chat-group-form__field--right
-      %input.chat-group-form__action-btn{type: "submit", value: "Save"}/
+      = f.submit class: 'chat-group-form__action-btn'

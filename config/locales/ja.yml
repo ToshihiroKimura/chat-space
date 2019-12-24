@@ -1,6 +1,15 @@
 ---
 ja:
   activerecord:
+    attributes:
+      user:
+        name: ユーザー名
+        email: メールアドレス
+      group:
+        name: グループ名
+      message:
+        text: メッセージ
+        image: 添付ファイル
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
