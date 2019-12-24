@@ -63,3 +63,7 @@ gem 'devise'
 
 #binding.pry導入
 gem 'pry-rails'
+
+#carrierwave導入
+gem 'carrierwave'
+gem 'mini_magick'

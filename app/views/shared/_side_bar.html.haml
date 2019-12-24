@@ -10,11 +10,10 @@
           = icon('fas', 'edit', class: "i")
 
   .group-list
-    - @groups.each do |group|
+    - current_user.groups.each do |group|
       .group
-        = link_to "#"do
+        = link_to group_messages_path(group) do
           %h2
             = group.name
           %p
-            また連絡するよ。
-
+            = group.show_last_message
