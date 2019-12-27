@@ -38,6 +38,14 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # RSpec導入
+  gem 'rspec-rails'
+  # factory_bot導入
+  gem 'factory_bot_rails'
+  # コントローラーのテスト
+  gem 'rails-controller-testing'
+  #Faker導入
+  gem 'faker', "~> 2.8"
 end
 
 group :development do

@@ -1,6 +1,5 @@
 class MessagesController < ApplicationController
   before_action :set_group
-  before_action :correct_user
   
   def index
     @message = Message.new

@@ -6,6 +6,6 @@
   .message__content
     - if message.text.present?
       %p
-        = message.text
+        = simple_format(message.text)
     - if message.image.present?
       = image_tag message.image.url

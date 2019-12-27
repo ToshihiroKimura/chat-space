@@ -14,6 +14,6 @@
       .group
         = link_to group_messages_path(group) do
           %h2
-            = group.name
+            = group.name.truncate(25)
           %p
-            = group.show_last_message
+            = group.show_last_message.truncate(25)
