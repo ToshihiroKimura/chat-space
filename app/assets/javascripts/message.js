@@ -1,34 +1,36 @@
 $(function(){
   function buildHTML(message){
     if (message.image) {
-      var html = `<div class="message">
-        <div class="message__user-name">
-          ${message.user_name}
-        </div>
-        <div class="message__time">
-          ${message.created_at}
-        </div>
-        <div class="message__content">
-          <p>
-            ${message.text}
-          </p>
+      var html =
+        `<div class="message">
+          <div class="message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="message__time">
+            ${message.created_at}
+          </div>
+          <div class="message__content">
+            <p>
+              ${message.text}
+            </p>
             <image src =${message.image}>
-        </div>
-      </div>`
+          </div>
+        </div>`
     } else {
-      var html = `<div class="message">
-        <div class="message__user-name">
-          ${message.user_name}
-        </div>
-        <div class="message__time">
-          ${message.created_at}
-        </div>
-        <div class="message__content">
-          <p>
-            ${message.text}
-          </p>
-        </div>
-      </div>`
+      var html =
+        `<div class="message">
+          <div class="message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="message__time">
+            ${message.created_at}
+          </div>
+          <div class="message__content">
+            <p>
+              ${message.text}
+            </p>
+          </div>
+        </div>`
     }
     return html;
   }
@@ -54,9 +56,7 @@ $(function(){
     })
     .fail(function(){
       alert('メッセージ送信に失敗しました');
-      $('#message_text').val('')
       $(".btn").removeAttr("disabled");
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
   })
 });
