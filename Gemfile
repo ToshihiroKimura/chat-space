@@ -79,3 +79,8 @@ gem 'mini_magick'
 
 # jQuery導入
 gem 'jquery-rails'
+
+# Unicorn導入
+group :production do
+  gem 'unicorn', '5.4.1'
+end
