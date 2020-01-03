@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(message){
+    if ( message.image ) {
       var html =`
       <div class="message" data-message-id=${message.id}>
         <div class="message__user-name">
@@ -15,6 +16,8 @@ $(function(){
           <image src =${message.image}>
         </div>
       </div>`
+      return html;
+      }else{
       var html =`
       <div class="message" data-message-id=${message.id}>
         <div class="message__user-name">
@@ -29,6 +32,7 @@ $(function(){
           </p>
           </div>
       </div>`
+    }
     return html;
   }
   $('#new_message').on('submit', function(e){
